@@ -26,18 +26,7 @@ const element = document.getElementById("div1");
 element.appendChild(para);
 </script>
 ```
-Example Explained 
-This code creates a new <p> element:
-const para = document.createElement("p");
-To add text to the <p> element, you must create a text node first. This code creates a text node:
-const node = document.createTextNode("This is a new paragraph.");
-Then you must append the text node to the <p> element:
-para.appendChild(node);
-Finally you must append the new element to an existing element.
-This code finds an existing element:
-const element = document.getElementById("div1");
-This code appends the new element to the existing element:
-element.appendChild(para);
+
 ---
 
 ## 3. What is Event Bubbling and how does it work?
@@ -58,12 +47,14 @@ Event bubbling is the process where an event triggered on a child element automa
   </div>
 </form>
 ```
-A click on the inner <p> first runs onclick:
+### Event Bubbling Example Flow
 
-On that <p>.
-Then on the outer <div>.
-Then on the outer <form>.
-And so on upwards till the document object.
+A click on the inner `<p>` first runs `onclick`:
+
+1. On the `<p>`.
+2. Then on the outer `<div>`.
+3. Then on the outer `<form>`.
+4. And so on upwards till the `document` object.
 ---
 
 ## 4. What is Event Delegation in JavaScript? Why is it useful?
